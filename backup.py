@@ -56,7 +56,6 @@ class backupMe(object):
 			folders = os.listdir(path)
 			for f in folders:
 				os.popen("tar -zcvf "+ path +"/"+ f +".gz "+ path +"/"+f).read()
-				os.popen("tar -zcvf "+ path +"/"+ f +".gz "+ path +"/"+f).read()
 				os.popen("drive upload -f " + path +"/"+ f +".gz " + " -p " + match[0]).read()
 				os.popen("rm -f " + path +"/"+ f +".gz ")
 				print("rm -f " + path +"/"+ f +".gz ")
